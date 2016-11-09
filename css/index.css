@@ -1,0 +1,171 @@
+
+/*葫芦娃*/
+#hlw{
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+}
+/*移动框 moveTop*/
+.moveTop_bg{
+	background:#07002B;
+	width: 100%;                              
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 6;
+	
+}
+.moveTop_ul{
+	position: fixed;
+	right: 0;
+	top: 10px;
+	z-index: 6;
+	min-width: 406px;
+}
+.moveTop_ul li{
+	float: left;
+	margin-right: 30px;
+	text-align: center;
+
+}
+.moveTop_ul li a{
+	color:#fff;
+}
+.active a{
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	padding-bottom:6px;
+
+}
+/**头部实验**/
+.moveTop_ul .active a:after{
+	display: none;
+}
+.moveTop_ul li a{
+	width: 80px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.moveTop_ul li a:hover{
+	color:#fff;
+}
+.moveTop_ul li a:after{
+	content:'';
+	display:block; 
+	width:0; position:absolute; 
+	bottom:-7px;
+	left:100%; 
+	border-bottom:1px solid #fff;
+	transition:width 0.3s, left 0.3s; 
+}
+.moveTop_ul li a:hover:after{ 
+	width:100%; 
+	left:0; 
+	transition:width 0.3s; 
+}
+
+/**----------------------------------------**/
+
+
+/*头部 head*/
+.head{ text-align: center; position: relative;background-color: #07002B;width: 100%;height: 400px;}
+.head_t{position: absolute;top: 120px;left: 50%;width: 400px;margin-left: -200px; color: #fff;}
+.head_t h2{font-size: 50px; font-weight: normal;}
+.head_t p{font-size: 20px; margin-top: 20px;}
+
+/*装饰*/
+.decorate{ width: 700px; margin:0 auto;  margin-top: 100px; }
+.decorate ul li{ float: left; margin-left: 100px; }
+.decorate ul li:nth-child(1){ background: url(../images/1.png) no-repeat -10px -50px; width: 58px; height: 70px; transition: 1s all ease; }
+.decorate ul li:nth-child(2){ background: url(../images/1.png) no-repeat -72px -50px; width: 58px; height: 50px;}
+.decorate ul li:nth-child(3){ background: url(../images/1.png) no-repeat -134px -50px; width: 58px; height: 50px; }
+.decorate ul li:nth-child(4){ background: url(../images/1.png) no-repeat -196px -50px; width: 58px; height: 50px; }
+.decorate ul li:nth-child(1):hover{
+	
+}
+/*自我介绍 Personality*/
+.personality{width: 400px; height: 340px; margin: 0 auto; background: #fff; position: relative;overflow: hidden;margin-top: 100px;}
+.personality_square{width: 400px;height: 400px;margin:0 auto; text-align: center;}
+.circle{margin:0 auto;width: 115px; height: 115px; border-radius: 50%;background:#07002B;text-align: center;color: #fff; line-height: 115px;}
+.personality ul{position: absolute; top: 80px;left: 0; }
+.personality ul li{float: left; width: 400px;height: 400px;line-height: 30px;}
+.personality ul li h3{line-height: 40px; font-weight: normal; font-size: 22px;}
+.personality ul li p{width: 350px; margin:0 auto; font-size: 17px;}
+.personality ol li{width: 20px; height: 20px; border:2px solid black; border-radius: 50%; float: left; margin-right: 20px;}
+.personality ol{position: absolute;bottom: 0;left: 50%; width: 400px; margin-left: -100px;}
+.round{background: black;}
+.personality_tit h3{text-align:center;font-size: 1.5em; font-weight: normal;}
+.title{width: 100px; height: 10px; background: black; margin:0 auto;}
+.title p{ width: 500px; height: 1px; background: black; margin-left: -200px; position: relative;top: 5px; left: 0; }
+
+
+/*作品展示 works*/
+.works{width: 100%; height: 600px; margin-top: 100px;}
+.works_box{ margin-top: 100px; }
+.works div ul{ position: relative;width:600px; height:400px; margin:0 auto;transform-style: preserve-3d; perspective:800px; }
+.works div ul li{position: absolute; left: 0; top: 0; width: 100%;height: 100%; background: #399;text-align: center; border:1px solid #ccc; opacity: 0;transition: 1s all ease;}
+.works div ul .l2{transform: translateX(-240px) rotateY(40deg);}
+.works div ul .l1{opacity:1;transform: translateX(-200px) rotateY(40deg); }
+.works div ul .cur{opacity: 1; transform: translateZ(100px) ; }
+.works div ul .r1{opacity: 1;transform: translateX(200px) rotateY(-40deg);}
+.works div ul .r2{transform: translateX(240px) rotateY(-40deg);}
+.works_tit{ margin-bottom: 30px; }
+.works_tit h3{ text-align: center; font-size: 1.5em;font-weight: normal; margin-bottom: 10px;  }
+.works_title{ width: 100px; height: 10px; background: black;margin:0 auto;}
+.works_title p{width: 500px; height: 1px; background: black;margin-left: -200px; position: relative;top: 5px; left: 0;}
+.works_box .box_span{ position: relative; left: 50%; top: 60px; font-size: 20px; margin-left: -40px; }
+/*小案例 case*/
+.case{width: 100%; height: 640px; margin-top: 200px;}
+.case_box li{ float: left; width: 300px; height: 250px; margin:16px; overflow: hidden; position: relative; }
+.case_box li img{ width: 300px; height: 250px;  transition: 1s all ease;}
+.case_box li div{ position: absolute; left: 50%; top: 50%; margin:-20px 0 0 -50px;  color: #fff; opacity: 0;transition: 1s all ease; }
+.case_box li:hover img{ transform: scale(1.3); }
+.case_box li:hover div{ opacity: 1; }
+.case_tit{ margin-bottom:20px; }
+.case_tit h3{ text-align: center; font-size: 1.5em; font-weight: normal; margin-bottom: 10px; }
+.case_title{ width: 100px; height: 10px; background: black; margin:0 auto; }
+.case_title p{ width:500px; height: 1px; background: black; margin-left: -200px; position: relative;top: 5px; left: 0; }
+
+/*联系方式 concat*/
+.concat{width: 100%; height: 600px; margin-top: 100px; }
+.concat .phone{ background:url("../images/1.png") no-repeat -110px -125px; width: 100px; height: 70px; transition: 1s all ease; position: absolute; top: 100px; left: 50%; margin: 0 0 0 -50px; }
+.concat_content li{ transition: 1s ease all;  position: relative; border: 2px solid #000; width: 300px; height: 300px; float: left; margin-left: 20px;  text-align: center; border-radius: 10px; overflow: hidden; }
+.concat_content span{ font-size: 20px; position: relative; top: 60%;left: 0; right: 0;   }
+.concat_content li p{ position: absolute; left: 0; bottom: 0; font-size: 26px;  width: 100%; height: 35px; border-radius: 5px; background: #000; color: #fff;  transition: 1s all ease; }
+.concat_content li:hover p{  bottom: 265px; }
+.concat_content li:hover i{ top: 80px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
